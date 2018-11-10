@@ -28,20 +28,32 @@
 
     <div class="container-fluid">
 
-      <header class=" text-center">
+      <header class="row">
 
-        <a href="index.html">
-          <div id ="logo" alt="img" class="col-xs-4 col-sm-2"> </div>
-        </a>
-
-        <h1> Grand Py Bot </h1>
-
-        <h2> Raconte-nous une histoire </h2>
-
+       
+        <div id ="logo" alt="img" class="col-lg-2">
+          <a href="index.html">
+            <img src="../static/img/logo.png" alt="Accueil">
+          </a>
+        </div>
+        
+        <div id="title" class="text-center offset-lg-2 col-lg-4">
+            <h1 class="text-center"> Grand Py Bot </h1>
+            <h3 class="text-center"> Raconte-nous une histoire </h2>
+        </div>
+      
       </header>
 
       
       <section>
+
+        <div id="chat_box" class=" offset-lg-2 col-lg-8">
+          <p> Bienvenue </p>
+        </div>
+
+
+
+
         <div class="row" id="chat_writer">
           <input id="usr_question" class="form-control offset-lg-2 col-lg-6"
                      type="text" size = 48 
