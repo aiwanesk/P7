@@ -1,7 +1,7 @@
 header {
     border: solid;
     padding: 10px 0 10px 0;
-    background-color: #484C52;  
+    background-color: #473198;  
 }
 
 header img {
@@ -15,7 +15,7 @@ footer {
     margin-top: 20px;
     border: solid;
     font-size: 0.8em;
-    background-color: #484C52; 
+    background-color: #473198; 
 }
 
 .container-fluid {
@@ -35,16 +35,9 @@ footer {
     background-color: #36393F;
 }
 
-#chat_box p {
-
-    margin-top: 2%;
-    border: solid;
-    border-radius: 15px;
-    background-color: #484C52;
-}
 
 body {
 
-    background-color: #F89D19; 
+    background-color: ; 
 }
 
