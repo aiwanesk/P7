@@ -17,9 +17,9 @@ def test_no_punctuation():
     assert parse.sentence_parser(carac) == "only judge can god meee"
 
 def test_parse():
-    carac = "Absolument Openclassrooms apres"
-    assert parse.sentence_parser(carac) == "openclassrooms"
+    carac = "Absolument 2 Openclassrooms apres"
+    assert parse.sentence_parser(carac) == "2 openclassrooms"
 
 def test_request():
-    carac = "Où est le Parc des princes"
-    assert parse.sentence_parser(carac) == "parc princes"
+    carac = "Salut GrandPy ! Est-ce que tu connais l'adresse d'OpenClassrooms ?"
+    assert parse.sentence_parser(carac) == "salut grandpy connais adresse openclassrooms"

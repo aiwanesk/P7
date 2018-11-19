@@ -17,8 +17,9 @@ class Parser():
         i =0
         while (i < len(tab)):
             if tab[i] in self.word:
-                sentence = sentence.replace(tab[i], "")
+                tab[i] = ""
             i +=1
+        sentence = " ".join(tab)
         sentence = re.sub(' +', ' ', sentence)
         sentence = sentence.strip()
         return sentence
