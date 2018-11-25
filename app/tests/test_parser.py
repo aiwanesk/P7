@@ -13,8 +13,8 @@ def test_no_words():
     assert parse.sentence_parser(carac) == ""
 
 def test_no_punctuation():
-    carac = "only-judge, can god?? meee,"
-    assert parse.sentence_parser(carac) == "only judge can god meee"
+    carac = "Montre-moi, grand?? line,"
+    assert parse.sentence_parser(carac) == "montre grand line"
 
 def test_parse():
     carac = "Absolument 2 Openclassrooms apres"

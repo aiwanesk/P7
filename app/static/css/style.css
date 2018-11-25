@@ -1,7 +1,9 @@
+
 header {
     border: solid;
     padding: 10px 0 10px 0;
-    background-color: #473198;  
+    background-color: #2b3c53;
+    font-color: white;
 }
 
 header img {
@@ -10,13 +12,11 @@ header img {
 
 }
 
-footer {
-    padding: 10px 0 10px 0;
-    margin-top: 20px;
-    border: solid;
-    font-size: 0.8em;
-    background-color: #473198; 
+header h1, header h3{
+
+	color: white;
 }
+
 
 .container-fluid {
 
@@ -29,15 +29,62 @@ footer {
 
     border: solid;
     border-radius: 15px;
-    margin-top: 2%;
+    border-color: white;
+    margin-top: 1%;
     margin-bottom: 2%;
-    height: 400px;
-    background-color: #36393F;
+    height: 600px;
+    overflow: auto;
 }
 
+#chat_answer {
+
+	border: solid;
+    border-radius: 15px;
+    left: 22%;
+    border-color: white;
+    padding-left: 10px;
+	width: 100%;
+	margin: 10px;
+
+}
 
 body {
 
-    background-color: ; 
+    background-color: #00aa9f; 
 }
 
+
+footer {
+    padding: 10px 0 10px 0;
+    margin-top: 20px;
+    border: solid;
+    font-size: 0.8em;
+    background-color: #2b3c53; 
+}
+
+footer p {
+
+	color: white;
+
+}
+
+
+
+@media all and (max-device-width: 1376px){
+
+	#chat_box {
+		height: 350px;
+	}
+
+
+}
+
+
+#map {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        height: 200px;
+        border-radius: 15px;
+        padding: 0;
+      }
