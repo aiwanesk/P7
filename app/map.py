@@ -2,13 +2,11 @@ import requests
 import json
 
 
-map_key = "AIzaSyCPU0-dQgr2zz98_GJgsNy4M4LuNGg5S2o"
-
 class GoogleMap:
 
     def __init__(self, question):
         self.url = "https://maps.googleapis.com/maps/api/geocode/json?address="
-        self.key = "AIzaSyCPU0-dQgr2zz98_GJgsNy4M4LuNGg5S2o"
+        self.key = "Key"
         self.question = '+'.join(question.split())
 
     def get_gps_coord(self):
@@ -18,8 +16,9 @@ class GoogleMap:
             return resp_json['results'][0]['geometry']['location']
         except IndexError:
             return ""
-            
 
-Gmap = GoogleMap("Stade de France")
+def main():
+    pass
 
-print(Gmap.get_gps_coord())
+if name == "__main__":
+    pass
