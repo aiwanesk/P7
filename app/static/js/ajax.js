@@ -36,11 +36,11 @@ function bot_answer()
 		var newDiv1 = document.createElement('div');
 		newDiv1.setAttribute("id", "chat_answer");
 		var mapDiv = document.createElement('div');
-		mapDiv.setAttribute("id", "map");
+		mapDiv.setAttribute("class", "map");
 		newDiv1.appendChild(mapDiv);
 		chat.appendChild(newDiv1);
 		var map;
-   		map = new google.maps.Map(document.getElementById('map'), {
+   		map = new google.maps.Map(document.getElementsByClassName('map'), {
         	center: {lat: 48.6843900, lng:  6.1849600},
         	zoom: 15
     	});
@@ -52,4 +52,19 @@ function bot_answer()
 
 }
 
+
+function bot_answerv2 () {
+
+	var div = document.createElement('div');
+	div.classList.add("map");
+	div.innerHTML = "abc";
+	var latlng = new google.maps.LatLng(39.305, -76.617);
+	map1 = new google.maps.Map(document.getElementsByClassName('map'), {
+        	center: latlng,
+        	zoom: 15
+    	});
+	div.appendChild(map1);
+
+
+}
 
