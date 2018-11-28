@@ -1,13 +1,24 @@
+# coding: utf-8
+
 import wikipedia
 
+class Wiki:
 
-wikipedia.set_lang("fr")
+    def __init__(self, place):
+        wikipedia.set_lang("fr")
+        self.place = " " + place
 
-search = wikipedia.search("One piece")
+    def wiki_quote(self):
+        search = wikipedia.search(self.place)
+        if search == []:
+            result = ("Je me rappelle plus")
+        else:
+            title_page = search[0]
+            text = wikipedia.summary(title_page, sentences = 1)
+            result = ("Le saviez-tu : " + text)
+        return result
 
-if search == []:
-    print("J'ai rien trouvé wolah")
-else:
-    title_page = search[0]
-    text = wikipedia.summary(title_page, sentences = 2)
-    print(text)
+sdf = Wiki("Stade de France")
+
+print(sdf.wiki_quote())
+

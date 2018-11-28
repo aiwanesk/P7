@@ -6,7 +6,7 @@ class GoogleMap:
 
     def __init__(self, question):
         self.url = "https://maps.googleapis.com/maps/api/geocode/json?address="
-        self.key = "Key"
+        self.key = "AIzaSyCPU0-dQgr2zz98_GJgsNy4M4LuNGg5S2o"
         self.question = '+'.join(question.split())
 
     def get_gps_coord(self):
@@ -16,9 +16,3 @@ class GoogleMap:
             return resp_json['results'][0]['geometry']['location']
         except IndexError:
             return ""
-
-def main():
-    pass
-
-if name == "__main__":
-    pass

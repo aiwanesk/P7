@@ -7,7 +7,9 @@ $(function() {
     	if (usr_query !== "") {
     	    console.log("Vous avez saisi :" + usr_query);
     	    display_message(usr_query);
-    	    setTimeout("bot_answer()", 2000)
+    	    loading();
+    	    setTimeout("remove_loading()", 3000);
+    	    setTimeout("bot_answer()", 3100)
     	}
 	});
 
@@ -19,7 +21,7 @@ function display_message(usr_query)
 {
 	var chat = document.getElementById('chat_box');
 	var newDiv = document.createElement('div');
-	newDiv.setAttribute("id", "chat_answer");
+	newDiv.setAttribute("class", "chat_answer");
 	newDiv.textContent = usr_query;
 	chat.appendChild(newDiv);
 	console.log("Message affiché");
@@ -34,7 +36,7 @@ function bot_answer()
 		display_message("Voila ce que j'ai trouvé")
 		var chat = document.getElementById('chat_box');
 		var newDiv1 = document.createElement('div');
-		newDiv1.setAttribute("id", "chat_answer");
+		newDiv1.setAttribute("class", "chat_answer");
 		var mapDiv = document.createElement('div');
 		mapDiv.setAttribute("class", "map");
 		newDiv1.appendChild(mapDiv);
@@ -68,3 +70,25 @@ function bot_answerv2 () {
 
 }
 
+
+function loading() {
+
+	var chat = document.getElementById('chat_box');
+	var newDiv = document.createElement('div');
+	newDiv.setAttribute("id", "loading");
+	var rep = document.createElement('p');
+	rep.innerHTML = " A ta question, je réfléchis."
+	newDiv.appendChild(rep);
+	chat.appendChild(newDiv);
+
+
+
+}
+
+function remove_loading() {
+
+	var loader = document.getElementById('loading');
+	loader.remove();
+
+
+}

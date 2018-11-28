@@ -27,6 +27,3 @@ def test_get_coord(monkeypatch):
     monkeypatch.setattr(urllib.request, 'urlopen', result)
 
     assert Gmap.get_gps_coord() == result
-
-
-# 
