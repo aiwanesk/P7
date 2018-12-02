@@ -40,7 +40,6 @@ header h1, header h3{
 
 	border: solid;
     border-radius: 15px;
-    left: 22%;
     border-color: white;
     padding-left: 10px;
 	width: 100%;
@@ -105,4 +104,6 @@ footer p {
         height: 200px;
         border-radius: 15px;
         padding: 0;
+        margin: 10px;
+
       }
