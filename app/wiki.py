@@ -21,3 +21,7 @@ class Wiki:
 sdf = Wiki("Stade de France")
 
 print(sdf.wiki_quote())
+<<<<<<< HEAD
+=======
+
+>>>>>>> 702b707efcd049aa39a6d60b43fb4f3024418b85
