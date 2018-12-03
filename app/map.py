@@ -2,7 +2,7 @@ import requests
 import json
 
 
-map_key = "AIzaSyCPU0-dQgr2zz98_GJgsNy4M4LuNGg5S2o"
+map_key = "KEY"
 
 class GoogleMap:
 

@@ -9,9 +9,6 @@ def test_no_entry(monkeypatch):
     result = ""
     Gmap = GoogleMap("")
 
-    def mockreturn(request):
-        return result
-
     monkeypatch.setattr(urllib.request, 'urlopen', result)
 
     assert Gmap.get_gps_coord() == result
@@ -20,9 +17,6 @@ def test_no_entry(monkeypatch):
 def test_get_coord(monkeypatch):
     result = {'lat': 48.9244592, 'lng': 2.3601645}
     Gmap = GoogleMap("Stade de france")
-
-    def mockreturn(request):
-        return result
 
     monkeypatch.setattr(urllib.request, 'urlopen', result)
 
