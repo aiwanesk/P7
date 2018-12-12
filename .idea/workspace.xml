@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdaa43ad-7b4e-4527-ab66-bf1a612d4ff5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/word.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/map.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/parser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/ajax.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tests/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tests/test_map.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tests/test_parser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tests/test_wiki.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tests/word.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/wiki.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/word.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -40,17 +25,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GPapp/static/js/ajax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1088">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+            <state relative-caret-position="525">
+              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GPapp/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GPapp/views.py">
+        <entry file="file://$PROJECT_DIR$/GPapp/map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            <state relative-caret-position="102">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GPapp/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="77" column="61" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GPapp/parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,15 +85,16 @@
         <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/GPapp/__init__.py" />
         <option value="$PROJECT_DIR$/run.py" />
-        <option value="$PROJECT_DIR$/GPapp/templates/index.html" />
-        <option value="$PROJECT_DIR$/GPapp/map.py" />
         <option value="$PROJECT_DIR$/GPapp/wiki.py" />
+        <option value="$PROJECT_DIR$/GPapp/parser.py" />
         <option value="$PROJECT_DIR$/GPapp/static/js/ajax.js" />
         <option value="$PROJECT_DIR$/GPapp/views.py" />
+        <option value="$PROJECT_DIR$/GPapp/templates/index.html" />
+        <option value="$PROJECT_DIR$/GPapp/map.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -102,19 +118,6 @@
               <item name="P7" type="462c0819:PsiDirectoryNode" />
               <item name="GPapp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="P7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="P7" type="462c0819:PsiDirectoryNode" />
-              <item name="GPapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="P7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="P7" type="462c0819:PsiDirectoryNode" />
-              <item name="GPapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -124,6 +127,11 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\project_7\P7" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -138,6 +146,27 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.run">
+    <configuration name="parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="P7" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GPapp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GPapp/parser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="run" type="PythonConfigurationType" factoryName="Python">
       <module name="P7" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,6 +211,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.parser" />
         <item itemvalue="Python.views" />
       </list>
     </recent_temporary>
@@ -209,9 +239,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23660715" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22321428" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -240,24 +271,10 @@
     <entry file="file://$PROJECT_DIR$/app/__init__.py" />
     <entry file="file://$PROJECT_DIR$/app/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/app/views.py" />
-    <entry file="file://$PROJECT_DIR$/GPapp/map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="59" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GPapp/wiki.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GPapp/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="77" column="100" selection-start-line="77" selection-start-column="100" selection-end-line="77" selection-end-column="100" />
         </state>
       </provider>
     </entry>
@@ -271,21 +288,45 @@
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GPapp/static/js/ajax.js">
+    <entry file="file://$PROJECT_DIR$/GPapp/parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1088">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        <state relative-caret-position="153">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GPapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        <state relative-caret-position="444">
+          <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GPapp/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="77" column="61" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GPapp/static/js/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GPapp/map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
