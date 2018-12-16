@@ -9,20 +9,119 @@ $(function() {
     	    display_message(usr_query);
     	    loading();
     	    ajaxPost(usr_query, data_treat);
-    	    remove_loading();
-    	    //loading();
-    	    //setTimeout("remove_loading()", 3000);
-    	    //setTimeout("bot_answer()", 3100)
     	}
 	});
 
 });
 
-function initMap(coord, div1)
+
+
+
+function display_message(usr_query)
+
+{
+	var chat = document.getElementById('chat_box');
+	var newDiv = document.createElement('div');
+	newDiv.setAttribute("class", "chat_answer");
+	newDiv.textContent = usr_query;
+	chat.appendChild(newDiv);
+	console.log("Message affiché");
+
+}
+
+function bot_answer()
+
+{
+	var nb = 1
+	if (nb == 1) {
+		display_message("Voila ce que j'ai trouvé")
+		var chat = document.getElementById('chat_box');
+		var mapDiv = document.createElement('div');
+		mapDiv.setAttribute("class", "chat_answer");
+		var latlng = new google.maps.LatLng(39.305, -76.617);
+		initMap(latlng, mapDiv);
+		chat.appendChild(mapDiv);
+	}
+
+	else {
+		display_message("Désolé, je n'ai rien trouvé");
+
+
+	}
+
+}
+
+
+
+function loading() {
+
+	var chat = document.getElementById('chat_box');
+	var newDiv = document.createElement('div');
+	newDiv.setAttribute("id", "loading");
+	var rep = document.createElement('p');
+	rep.innerHTML = " A ta question, je réfléchis."
+	newDiv.appendChild(rep);
+	chat.appendChild(newDiv);
+
+
+
+}
+
+function remove_loading() {
+
+	var loader = document.getElementById('loading');
+	loader.remove();
+
+
+}
+
+function ajaxPost(data, callback)
+// Display gif loader, prepare and send ajax 'POST' request
+{
+    var req = new XMLHttpRequest();
+    req.open('POST', "/result");
+    req.addEventListener('load', function() {
+        if ((req.status >= 200 && req.status < 400)) {
+            callback(req.responseText);
+        } else {
+            console.error(req.status + " " + req.statusText + " " + "/result");
+        }
+    });
+    req.addEventListener('error', function() {
+        console.error("Erreur réseau avec l'URL " + url);
+    });
+    req.send(data);
+}
+
+
+
+function data_treat(json_data) {
+
+    var tab = JSON.parse(json_data);
+    dict = tab[0];
+    console.log(dict["lat"]);
+    console.log(dict["lng"]);
+
+
+
+    if (dict == "1") {
+        display_message("Désolé, je ne me rappelle plus où se situe ce lieu");
+    }
+    else {
+	    var latlng = new google.maps.LatLng(dict["lat"], dict["lng"]);
+        initMap(latlng);
+    }
+    display_message(tab[1]);
+    remove_loading();
+
+}
+
+function initMap(coord)
 {
     var mapZone = document.createElement('div');
-    mapZone.classList.add('map');
-    div1.appendChild(mapZone);
+    var chatZone = document.getElementById('chat_box');
+
+
     var map = new google.maps.Map(mapZone, {
         zoom: 16,
         center: coord,
@@ -142,104 +241,11 @@ function initMap(coord, div1)
             position: coord,
             map: map
         });
-      }
+        
+        if (coord != undefined) {
 
-
-
-function display_message(usr_query)
-
-{
-	var chat = document.getElementById('chat_box');
-	var newDiv = document.createElement('div');
-	newDiv.setAttribute("class", "chat_answer");
-	newDiv.textContent = usr_query;
-	chat.appendChild(newDiv);
-	console.log("Message affiché");
-
-}
-
-function bot_answer()
-
-{
-	var nb = 1
-	if (nb == 1) {
-		display_message("Voila ce que j'ai trouvé")
-		var chat = document.getElementById('chat_box');
-		var mapDiv = document.createElement('div');
-		mapDiv.setAttribute("class", "chat_answer");
-		var latlng = new google.maps.LatLng(39.305, -76.617);
-		initMap(latlng, mapDiv);
-		chat.appendChild(mapDiv);
-	}
-
-	else {
-		display_message("Désolé, je n'ai rien trouvé");
-
-
-	}
-
-}
-
-
-
-function loading() {
-
-	var chat = document.getElementById('chat_box');
-	var newDiv = document.createElement('div');
-	newDiv.setAttribute("id", "loading");
-	var rep = document.createElement('p');
-	rep.innerHTML = " A ta question, je réfléchis."
-	newDiv.appendChild(rep);
-	chat.appendChild(newDiv);
-
-
-
-}
-
-function remove_loading() {
-
-	var loader = document.getElementById('loading');
-	loader.remove();
-
-
-}
-
-function ajaxPost(data, callback)
-// Display gif loader, prepare and send ajax 'POST' request
-{
-    var req = new XMLHttpRequest();
-    req.open('POST', "/result");
-    req.addEventListener('load', function() {
-        if ((req.status >= 200 && req.status < 400)) {
-            callback(req.responseText);
-        } else {
-            console.error(req.status + " " + req.statusText + " " + "/result");
+            mapZone.classList.add('map');
+            chatZone.appendChild(mapZone);
         }
-    });
-    req.addEventListener('error', function() {
-        console.error("Erreur réseau avec l'URL " + url);
-    });
-    req.send(data);
-}
 
-
-
-function data_treat(json_data) {
-
-    var tab = JSON.parse(json_data);
-    dict = tab[0];
-    console.log(dict["lat"]);
-    display_message(tab[1]);
-
-
-    //if (tab[1] == "1") {
-    //    display_message("Désolé, je ne me rappelle plus où se situe ce lieu");
-    //}
-    //else {
-    //    var mapDiv = document.createElement('div');
-	//    mapDiv.setAttribute("class", "chat_answer");
-    //    initMap(tab[1], mapDiv);
-    //}
-    //display_message(tab[2]);
-
-}
+      }

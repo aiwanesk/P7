@@ -11,7 +11,7 @@ class Wiki:
     def wiki_quote(self):
         search = wikipedia.search(self.place)
         if search == []:
-            result = ("Désolé, ma mémoire me fait défaut. "
+            result = ("Ma mémoire me fait défaut. "
                       "Je ne me rappelle de rien à propos de ce lieu.")
         else:
             title_page = search[0]
