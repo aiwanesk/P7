@@ -241,7 +241,7 @@ function initMap(coord)
             position: coord,
             map: map
         });
-        
+
         if (coord != undefined) {
 
             mapZone.classList.add('map');
