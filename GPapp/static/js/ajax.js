@@ -18,7 +18,7 @@ $(function() {
 
 
 function display_message(usr_query)
-
+// Create a div and display the message in parameter
 {
 	var chat = document.getElementById('chat_box');
 	var newDiv = document.createElement('div');
@@ -29,31 +29,9 @@ function display_message(usr_query)
 
 }
 
-function bot_answer()
-
+function loading()
+// Display a message as loader
 {
-	var nb = 1
-	if (nb == 1) {
-		display_message("Voila ce que j'ai trouvé")
-		var chat = document.getElementById('chat_box');
-		var mapDiv = document.createElement('div');
-		mapDiv.setAttribute("class", "chat_answer");
-		var latlng = new google.maps.LatLng(39.305, -76.617);
-		initMap(latlng, mapDiv);
-		chat.appendChild(mapDiv);
-	}
-
-	else {
-		display_message("Désolé, je n'ai rien trouvé");
-
-
-	}
-
-}
-
-
-
-function loading() {
 
 	var chat = document.getElementById('chat_box');
 	var newDiv = document.createElement('div');
@@ -68,7 +46,7 @@ function loading() {
 }
 
 function remove_loading() {
-
+// Remove the div loading
 	var loader = document.getElementById('loading');
 	loader.remove();
 
@@ -76,7 +54,7 @@ function remove_loading() {
 }
 
 function ajaxPost(data, callback)
-// Display gif loader, prepare and send ajax 'POST' request
+// Get the data from the back-end and use them
 {
     var req = new XMLHttpRequest();
     req.open('POST', "/result");
@@ -95,12 +73,12 @@ function ajaxPost(data, callback)
 
 
 
-function data_treat(json_data) {
+function data_treat(json_data)
+// Display all the data which come from the view
+{
 
     var tab = JSON.parse(json_data);
     dict = tab[0];
-    console.log(dict["lat"]);
-    console.log(dict["lng"]);
     display_message(tab[2]);
 
     if (dict == "1") {
@@ -116,6 +94,7 @@ function data_treat(json_data) {
 }
 
 function initMap(coord)
+// Display a google map center on the coord in parameter
 {
     var mapZone = document.createElement('div');
     var chatZone = document.getElementById('chat_box');

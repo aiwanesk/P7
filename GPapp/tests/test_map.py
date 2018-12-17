@@ -13,19 +13,21 @@ def test_no_entry(monkeypatch):
 
     assert Gmap.get_gps_coord() == result
 
+
 # Stade de France
 def test_get_coord(monkeypatch):
     result = {'lat': 48.9244592, 'lng': 2.3601645}
-    Gmap = GoogleMap("Stade de france")
+    gmap = GoogleMap("Stade de france")
 
     monkeypatch.setattr(urllib.request, 'urlopen', result)
 
-    assert Gmap.get_gps_coord() == result
+    assert gmap.get_gps_coord() == result
 
+# address eiffel tower
 def test_get_address(monkeypatch):
     result = " Champ de Mars 5 Avenue Anatole France Paris 75007"
-    Gmap = GoogleMap("Tour eiffel")
+    gmap = GoogleMap("Tour eiffel")
 
     monkeypatch.setattr(urllib.request, 'urlopen', result)
 
-    assert Gmap.get_adress() == result
+    assert gmap.get_adress() == result
