@@ -1,6 +1,6 @@
 import pytest
 
-from app.parser import Parser 
+from GPapp.parser import Parser
 
 parse = Parser()
 

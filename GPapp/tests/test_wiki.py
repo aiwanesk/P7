@@ -4,11 +4,12 @@ import wikipedia
 import pytest
 import urllib.request
 
-from app.wiki import Wiki
+from GPapp.wiki import Wiki
 
 
 def test_no_entry(monkeypatch):
-    result = "Je me rappelle plus"
+    result = "Ma mémoire me fait défaut. " \
+             "Je ne me rappelle de rien à propos de ce lieu."
     wiki = Wiki("")
 
     def mockreturn(request):
@@ -17,25 +18,15 @@ def test_no_entry(monkeypatch):
     monkeypatch.setattr(urllib.request, 'urlopen', result)
 
     assert wiki.wiki_quote() == result
-<<<<<<< HEAD
 
-
-=======
-    
->>>>>>> 702b707efcd049aa39a6d60b43fb4f3024418b85
 def test_quote(monkeypatch):
-    result = "Le saviez-tu : OpenClassrooms est une école en ligne qui propose à ses membres des cours certifiants \
-    et des parcours débouchant sur un métier d'avenir, réalisés en interne, par des écoles, des universités, \
-    ou encore par des entreprises partenaires comme Microsoft ou IBM"
-    wiki = Wiki("Openclassrooms")
-
-    def mockreturn(request):
-        return result
+    result = "Le saviez-tu : La tour Eiffel est une tour de fer puddlé de 324 mètres de hauteur (avec antennes)" \
+             " située à Paris, à l’extrémité nord-ouest" \
+             " du parc du Champ-de-Mars en bordure de la Seine dans le 7e arrondissement. " \
+             "Son adresse officielle est 5, avenue Anatole-France."
+    wiki = Wiki("tour eiffel")
 
     monkeypatch.setattr(urllib.request, 'urlopen', result)
 
-<<<<<<< HEAD
     assert wiki.wiki_quote() == result
-=======
-    assert wiki.wiki_quote() == result
->>>>>>> 702b707efcd049aa39a6d60b43fb4f3024418b85
+

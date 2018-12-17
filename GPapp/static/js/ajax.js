@@ -101,8 +101,7 @@ function data_treat(json_data) {
     dict = tab[0];
     console.log(dict["lat"]);
     console.log(dict["lng"]);
-
-
+    display_message(tab[2]);
 
     if (dict == "1") {
         display_message("Désolé, je ne me rappelle plus où se situe ce lieu");

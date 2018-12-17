@@ -2,11 +2,11 @@ import pytest
 import requests
 import urllib.request
 
-from app.map import GoogleMap
+from GPapp.map import GoogleMap
 
 # no entry
 def test_no_entry(monkeypatch):
-    result = ""
+    result = "1"
     Gmap = GoogleMap("")
 
     monkeypatch.setattr(urllib.request, 'urlopen', result)
@@ -21,3 +21,11 @@ def test_get_coord(monkeypatch):
     monkeypatch.setattr(urllib.request, 'urlopen', result)
 
     assert Gmap.get_gps_coord() == result
+
+def test_get_address(monkeypatch):
+    result = " Champ de Mars 5 Avenue Anatole France Paris 75007"
+    Gmap = GoogleMap("Tour eiffel")
+
+    monkeypatch.setattr(urllib.request, 'urlopen', result)
+
+    assert Gmap.get_adress() == result

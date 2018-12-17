@@ -15,6 +15,18 @@ class GoogleMap:
         except IndexError:
             return "1"
 
+    def get_adress(self):
+        response = requests.get(self.url + self.question + "&key=" + self.key)
+        resp_json = response.json()
+        try:
+            address = ""
+            for i in range(4):
+                address = address + " " + resp_json["results"][0]["address_components"][i]["long_name"]
+            address = address + " " + resp_json["results"][0]["address_components"][-1]["long_name"]
+            return address
+        except IndexError:
+            return "1"
+
 #def main():
 
 #    question = "tour eiffel"

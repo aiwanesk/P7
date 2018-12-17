@@ -28,8 +28,9 @@ def get_data():
     gmap = GoogleMap(new_question)
     gps_coord = gmap.get_gps_coord()
     print(gps_coord)
+    address = gmap.get_adress()
 
-    dic =  [gps_coord, wquote]
+    dic =  [gps_coord, wquote, address]
 
     return jsonify(dic)
 
