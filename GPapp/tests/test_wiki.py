@@ -18,12 +18,7 @@ def test_no_entry(monkeypatch):
 
 
 def test_quote(monkeypatch):
-    result = "Le saviez-tu : La tour Eiffel est une tour de fer" \
-             " puddlé de 324 mètres de hauteur (avec antennes)" \
-             " située à Paris, à l’extrémité nord-ouest" \
-             " du parc du Champ-de-Mars en bordure de la Seine " \
-             "dans le 7e arrondissement. " \
-             "Son adresse officielle est 5, avenue Anatole-France."
+    result = "Le saviez-tu : La tour Eiffel  est une tour de fer puddlé de 324 mètres de hauteur (avec antennes) située à Paris, à l’extrémité nord-ouest du parc du Champ-de-Mars en bordure de la Seine dans le 7e arrondissement. Son adresse officielle est 5, avenue Anatole-France."
     wiki = Wiki("tour eiffel")
 
     monkeypatch.setattr(urllib.request, 'urlopen', result)
